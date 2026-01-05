@@ -41,9 +41,7 @@ PC2> ping 10.1.1.1
 ```
 🌞 Protocolz ?
 
-```
-
-```
+📁 [p1_ping.pcap](./p1_ping.pcapng)
 
 🌞 Déterminer l'adresse MAC de vos trois machines
 
