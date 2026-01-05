@@ -1,3 +1,4 @@
+## Partie 1
 🌞 Déterminer l'adresse MAC de vos deux machines
     
 🌞 Définir une IP statique sur les deux machines
@@ -42,6 +43,8 @@ PC2> ping 10.1.1.1
 🌞 Protocolz ?
 
 📁 [p1_ping.pcap](./p1_ping.pcapng)
+
+## Partie 2
 
 🌞 Déterminer l'adresse MAC de vos trois machines
 
@@ -106,3 +109,5 @@ VPCS> arp
 ```
 
 📁 [p2_arp_node2.pcap ](./p2_arp_node2.pcapng)
+
+📁 [p2_arp_node3.pcap ](./p2_arp_node3.pcapng)
