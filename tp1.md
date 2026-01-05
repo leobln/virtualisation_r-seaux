@@ -2,6 +2,20 @@
 
     depuis le terminal de chacun des clients (VM Rocky ou VPCS), déterminer son adresse MAC
     une seule commande est nécessaire sur chaque client
+    
+🌞 Définir une IP statique sur les deux machines
+
+    depuis le terminal des machines Linux
+    indiquez dans le compte-rendu l'ensemble des commandes réalisées
+    montrez le contenu des fichiers que vous éditez (si vous en éditez)
+
+🌞 Proof !
+
+    prouver que votre changement d'IP est effectif, en une commande
+
+🌞 Effectuer un ping d'une machine à l'autre
+
+    c'est la commande ping, sans surprise vous me direz
 
 ```
 # pour node1.tp1.efrei
