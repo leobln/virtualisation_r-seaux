@@ -39,6 +39,11 @@ PC2> ping 10.1.1.1
 84 bytes from 10.1.1.1 icmp_seq=1 ttl=64 time=0.671 ms
 84 bytes from 10.1.1.1 icmp_seq=2 ttl=64 time=0.898 ms
 ```
+🌞 Protocolz ?
+
+```
+
+```
 
 🌞 Déterminer l'adresse MAC de vos trois machines
 
@@ -102,4 +107,4 @@ VPCS> arp
 00:50:79:66:68:02  10.1.1.3 expires in 113 seconds
 ```
 
-
+📁 [p2_arp_node2.pcap ](./p2_arp_node2)
