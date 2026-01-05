@@ -107,4 +107,4 @@ VPCS> arp
 00:50:79:66:68:02  10.1.1.3 expires in 113 seconds
 ```
 
-📁 [p2_arp_node2.pcap ](./p2_arp_node2)
+📁 [p2_arp_node2.pcap ](./p2_arp_node2.pcapng)
