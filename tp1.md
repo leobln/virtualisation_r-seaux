@@ -1,21 +1,10 @@
 🌞 Déterminer l'adresse MAC de vos deux machines
-
-    depuis le terminal de chacun des clients (VM Rocky ou VPCS), déterminer son adresse MAC
-    une seule commande est nécessaire sur chaque client
     
 🌞 Définir une IP statique sur les deux machines
 
-    depuis le terminal des machines Linux
-    indiquez dans le compte-rendu l'ensemble des commandes réalisées
-    montrez le contenu des fichiers que vous éditez (si vous en éditez)
-
 🌞 Proof !
 
-    prouver que votre changement d'IP est effectif, en une commande
-
 🌞 Effectuer un ping d'une machine à l'autre
-
-    c'est la commande ping, sans surprise vous me direz
 
 ```
 # pour node1.tp1.efrei
@@ -50,3 +39,67 @@ PC2> ping 10.1.1.1
 84 bytes from 10.1.1.1 icmp_seq=1 ttl=64 time=0.671 ms
 84 bytes from 10.1.1.1 icmp_seq=2 ttl=64 time=0.898 ms
 ```
+
+🌞 Déterminer l'adresse MAC de vos trois machines
+
+🌞 Définir une IP statique sur les trois machines
+
+🌞 Effectuer des ping d'une machine à l'autre
+
+```
+# pour node1(voir p1 pour ip+show)
+
+VPCS> ping 10.1.1.3
+84 bytes from 10.1.1.3 icmp_seq=1 ttl=64 time=7.606 ms
+84 bytes from 10.1.1.3 icmp_seq=2 ttl=64 time=3.740 ms
+84 bytes from 10.1.1.3 icmp_seq=3 ttl=64 time=3.186 ms
+84 bytes from 10.1.1.3 icmp_seq=4 ttl=64 time=4.829 ms
+84 bytes from 10.1.1.3 icmp_seq=5 ttl=64 time=3.746 ms
+
+# pour node2(voir p1 pour ip+show)
+
+VPCS> ping 10.1.1.3
+84 bytes from 10.1.1.3 icmp_seq=1 ttl=64 time=3.308 ms
+84 bytes from 10.1.1.3 icmp_seq=2 ttl=64 time=3.343 ms
+84 bytes from 10.1.1.3 icmp_seq=3 ttl=64 time=2.371 ms
+84 bytes from 10.1.1.3 icmp_seq=4 ttl=64 time=2.482 ms
+84 bytes from 10.1.1.3 icmp_seq=5 ttl=64 time=2.285 ms
+
+
+# pour node3
+
+VPCS> ip 10.1.1.3
+Checking for duplicate address...
+PC1 : 10.1.1.3 255.255.255.0
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.3/24          0.0.0.0           00:50:79:66:68:02  10000  127.0.0.1:10001
+       fe80::250:79ff:fe66:6802/64
+
+VPCS> ping 10.1.1.1
+84 bytes from 10.1.1.1 icmp_seq=1 ttl=64 time=5.306 ms
+84 bytes from 10.1.1.1 icmp_seq=2 ttl=64 time=3.252 ms
+84 bytes from 10.1.1.1 icmp_seq=3 ttl=64 time=3.020 ms
+84 bytes from 10.1.1.1 icmp_seq=4 ttl=64 time=2.243 ms
+84 bytes from 10.1.1.1 icmp_seq=5 ttl=64 time=1.980 ms
+
+VPCS> ping 10.1.1.2
+84 bytes from 10.1.1.2 icmp_seq=1 ttl=64 time=2.795 ms
+84 bytes from 10.1.1.2 icmp_seq=2 ttl=64 time=3.528 ms
+84 bytes from 10.1.1.2 icmp_seq=3 ttl=64 time=3.434 ms
+84 bytes from 10.1.1.2 icmp_seq=4 ttl=64 time=1.946 ms
+84 bytes from 10.1.1.2 icmp_seq=5 ttl=64 time=3.717 ms
+```
+
+🌞 Afficher la table ARP de node1
+
+```
+VPCS> arp
+
+00:50:79:66:68:01  10.1.1.2 expires in 105 seconds
+00:50:79:66:68:02  10.1.1.3 expires in 113 seconds
+```
+
+
