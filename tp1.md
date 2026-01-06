@@ -170,6 +170,8 @@ VPCS1  10.1.1.45/24         10.1.1.253        00:50:79:66:68:00  10008  127.0.0.
 
 🌞 Bail DHCP
 
+🌞 Use grep
+
 ```
 [leobln@efrei-xmg4agau1 ~]$ sudo cat /var/lib/dnsmasq/dnsmasq.leases
 [sudo] Mot de passe de leobln :
@@ -184,4 +186,67 @@ donc il correspond a la troisieme ligne
 [sudo] Mot de passe de leobln :
 1767747914 00:50:79:66:68:02 10.1.1.47 VPCS1 01:00:50:79:66:68:02
 ```
+
+## Partie 4
+
+🌞 Installez et configurez un serveur DHCP
+
+🌞 Test !
+
+```
+# pour node1
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.47/24         10.1.1.253        00:50:79:66:68:02  10004  127.0.0.1:10005
+       fe80::250:79ff:fe66:6802/64
+
+VPCS> ip dhcp
+DORA IP 10.1.1.247/24 GW 10.1.1.31
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.247/24        10.1.1.31         00:50:79:66:68:02  10004  127.0.0.1:10005
+       fe80::250:79ff:fe66:6802/64
+
+# pour node2
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.46/24         10.1.1.253        00:50:79:66:68:01  10006  127.0.0.1:10007
+       fe80::250:79ff:fe66:6801/64
+
+VPCS> ip dhcp
+DDORA IP 10.1.1.246/24 GW 10.1.1.31
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.246/24        10.1.1.31         00:50:79:66:68:01  10006  127.0.0.1:10007
+       fe80::250:79ff:fe66:6801/64
+
+# pour node3
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.45/24         10.1.1.253        00:50:79:66:68:00  10008  127.0.0.1:10009
+       fe80::250:79ff:fe66:6800/64
+
+VPCS> ip dhcp
+DDORA IP 10.1.1.245/24 GW 10.1.1.31
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.245/24        10.1.1.31         00:50:79:66:68:00  10008  127.0.0.1:10009
+       fe80::250:79ff:fe66:6800/64
+
+
+```
+
+📁 [p4_dhcp_race.pcap](./p4_dhcp_race.pcapng)
 
