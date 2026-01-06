@@ -268,5 +268,15 @@ VPCS> arp
 
 🌞 MITM
 
+```
+#commande utiliser sur node1
+
+sudo arping -c 1 -U -s 10.1.1.246 -I enp0s8 10.1.1.247
+
+#commande utiliser sur node2
+
+sudo arping -c 1 -U -s 10.1.1.247 -I enp0s8 10.1.1.246
+```
+
 📁 [p4_mitm.pcap](./p4_mitm.pcapng)
 
