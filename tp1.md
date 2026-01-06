@@ -42,7 +42,7 @@ PC2> ping 10.1.1.1
 ```
 🌞 Protocolz ?
 
-📁 [p1_ping.pcap](./p1_ping.pcapng)
+📁 [p1_ping](./p1_ping.pcapng)
 
 ## Partie 2
 
@@ -108,6 +108,6 @@ VPCS> arp
 00:50:79:66:68:02  10.1.1.3 expires in 113 seconds
 ```
 
-📁 [p2_arp_node2.pcap ](./p2_arp_node2.pcapng)
+📁 [p2_arp_node2 ](./p2_arp_node2.pcapng)
 
-📁 [p2_arp_node3.pcap ](./p2_arp_node3.pcapng)
+📁 [p2_arp_node3 ](./p2_arp_node3.pcapng)
