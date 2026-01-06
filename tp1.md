@@ -250,3 +250,19 @@ VPCS1  10.1.1.245/24        10.1.1.31         00:50:79:66:68:00  10008  127.0.0.
 
 📁 [p4_dhcp_race.pcap](./p4_dhcp_race.pcapng)
 
+🌞 ARP poisoning
+
+```
+#commande utiliser
+
+sudo arping -c 1 -U -s 10.1.1.100 -I enp0s8 10.1.1.247
+
+# vision de node1
+
+VPCS> arp
+
+08:00:27:99:83:4b  10.1.1.100 expires in 111 seconds
+```
+
+📁 [p4_poisoning.pcap](./p4_poisoning.pcapng)
+
