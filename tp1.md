@@ -111,3 +111,60 @@ VPCS> arp
 📁 [p2_arp_node2 ](./p2_arp_node2.pcapng)
 
 📁 [p2_arp_node3 ](./p2_arp_node3.pcapng)
+
+## Partie 3
+
+🌞 Installer un serveur DHCP
+
+```
+[leobln@efrei-xmg4agau1 ~]$ dnf install dnsmasq
+[...]
+[leobln@efrei-xmg4agau1 ~]$ vi /etc/dnsmasq.conf
+"ligne 183"dhcp-range=10.1.1.10,10.1.1.50,12h
+
+# pour node 1
+VPCS> ip dhcp
+DDORA IP 10.1.1.47/24 GW 10.1.1.253
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.47/24         10.1.1.253        00:50:79:66:68:02  10004  127.0.0.1:10005
+       fe80::250:79ff:fe66:6802/64
+
+# pour node2
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.2/24          0.0.0.0           00:50:79:66:68:01  10006  127.0.0.1:10007
+       fe80::250:79ff:fe66:6801/64
+
+VPCS> ip dhcp
+DDORA IP 10.1.1.46/24 GW 10.1.1.253
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.46/24         10.1.1.253        00:50:79:66:68:01  10006  127.0.0.1:10007
+       fe80::250:79ff:fe66:6801/64
+
+# pour node 3
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.3/24          0.0.0.0           00:50:79:66:68:00  10008  127.0.0.1:10009
+       fe80::250:79ff:fe66:6800/64
+
+VPCS> ip dhcp
+DDORA IP 10.1.1.45/24 GW 10.1.1.253
+
+VPCS> show
+
+NAME   IP/MASK              GATEWAY           MAC                LPORT  RHOST:PORT
+VPCS1  10.1.1.45/24         10.1.1.253        00:50:79:66:68:00  10008  127.0.0.1:10009
+       fe80::250:79ff:fe66:6800/64
+``` 
+📁 [p3_dhcp](./p3_dhcp.pcapng)
+
