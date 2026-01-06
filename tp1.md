@@ -168,3 +168,20 @@ VPCS1  10.1.1.45/24         10.1.1.253        00:50:79:66:68:00  10008  127.0.0.
 ``` 
 📁 [p3_dhcp](./p3_dhcp.pcapng)
 
+🌞 Bail DHCP
+
+```
+[leobln@efrei-xmg4agau1 ~]$ sudo cat /var/lib/dnsmasq/dnsmasq.leases
+[sudo] Mot de passe de leobln :
+1767747471 00:50:79:66:68:00 10.1.1.45 * 01:00:50:79:66:68:00
+1767747390 00:50:79:66:68:01 10.1.1.46 * 01:00:50:79:66:68:01
+1767747914 00:50:79:66:68:02 10.1.1.47 VPCS1 01:00:50:79:66:68:02
+
+# sachant que l'adresse mac de node 1 est : 00:50:79:66:68:02
+donc il correspond a la troisieme ligne 
+
+[leobln@efrei-xmg4agau1 ~]$ sudo cat /var/lib/dnsmasq/dnsmasq.leases | grep 00:50:79:66:68:02
+[sudo] Mot de passe de leobln :
+1767747914 00:50:79:66:68:02 10.1.1.47 VPCS1 01:00:50:79:66:68:02
+```
+
