@@ -72,6 +72,50 @@ efrei.fr resolved to 51.210.229.203
 84 bytes from 51.210.229.203 icmp_seq=5 ttl=253 time=49.335 ms
 ```
 
+🌞 Test test test
+
+```
+# pour node5
+
+VPCS> show ip
+
+NAME        : VPCS[1]
+IP/MASK     : 0.0.0.0/0
+GATEWAY     : 0.0.0.0
+DNS         :
+MAC         : 00:50:79:66:68:04
+LPORT       : 20031
+RHOST:PORT  : 127.0.0.1:20032
+MTU         : 1500
+
+VPCS> ip dhcp
+DDORA IP 10.2.1.164/24 GW 10.2.1.254
+
+VPCS> ping efrei.fr
+efrei.fr resolved to 51.210.229.203
+
+84 bytes from 51.210.229.203 icmp_seq=1 ttl=253 time=44.269 ms
+84 bytes from 51.210.229.203 icmp_seq=2 ttl=253 time=43.344 ms
+84 bytes from 51.210.229.203 icmp_seq=3 ttl=253 time=46.965 ms
+84 bytes from 51.210.229.203 icmp_seq=4 ttl=253 time=94.512 ms
+84 bytes from 51.210.229.203 icmp_seq=5 ttl=253 time=42.038 ms
+
+VPCS> show ip
+
+NAME        : VPCS[1]
+IP/MASK     : 10.2.1.164/24
+GATEWAY     : 10.2.1.254
+DNS         : 1.1.1.1
+DHCP SERVER : 10.2.1.253
+DHCP LEASE  : 43178, 43200/21600/37800
+MAC         : 00:50:79:66:68:04
+LPORT       : 20031
+RHOST:PORT  : 127.0.0.1:20032
+MTU         : 1500
+
+```
+
+
 
 
 
