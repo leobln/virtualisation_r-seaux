@@ -43,3 +43,22 @@ VPCS> ping 8.8.8.8
 
 📁 [p2_no_nat](./fichier_wiresshark/p2_no_nat.pcapng)
 
+🌞 Proooooooooof or lie
+
+```
+# pour node1
+
+VPCS> ping 1.1.1.1
+
+84 bytes from 1.1.1.1 icmp_seq=1 ttl=253 time=52.451 ms
+84 bytes from 1.1.1.1 icmp_seq=2 ttl=253 time=52.140 ms
+84 bytes from 1.1.1.1 icmp_seq=3 ttl=253 time=47.208 ms
+84 bytes from 1.1.1.1 icmp_seq=4 ttl=253 time=46.824 ms
+84 bytes from 1.1.1.1 icmp_seq=5 ttl=253 time=48.582 ms
+```
+
+📁 [p2_nat.pcap](./fichier_wiresshark/p2_nat.pcapng)
+
+
+
+
