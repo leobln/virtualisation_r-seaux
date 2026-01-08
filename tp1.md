@@ -42,7 +42,7 @@ PC2> ping 10.1.1.1
 ```
 🌞 Protocolz ?
 
-📁 [p1_ping](./p1_ping.pcapng)
+📁 [p1_ping](./fichier_wiresshark/p1_ping.pcapng)
 
 ## Partie 2
 
