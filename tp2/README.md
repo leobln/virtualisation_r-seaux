@@ -59,6 +59,21 @@ VPCS> ping 1.1.1.1
 
 📁 [p2_nat.pcap](./fichier_wiresshark/p2_nat.pcapng)
 
+🌞 Prove it
+
+```
+VPCS> ping efrei.fr
+efrei.fr resolved to 51.210.229.203
+
+84 bytes from 51.210.229.203 icmp_seq=1 ttl=253 time=71.775 ms
+84 bytes from 51.210.229.203 icmp_seq=2 ttl=253 time=48.913 ms
+84 bytes from 51.210.229.203 icmp_seq=3 ttl=253 time=53.843 ms
+84 bytes from 51.210.229.203 icmp_seq=4 ttl=253 time=52.359 ms
+84 bytes from 51.210.229.203 icmp_seq=5 ttl=253 time=49.335 ms
+```
+
+
+
 
 
 
