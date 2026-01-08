@@ -115,6 +115,24 @@ MTU         : 1500
 
 ```
 
+## Partie 3
+
+🌞 ARP-MITM
+
+```
+# commende utiliser sur l attaquant pour captrer le tram 
+
+sudo tcpdump -i enp0s8 -w vr.pcap
+
+# puis la mettre sur sont pc pour voir les tram dans fichier_wiresshark
+
+scp leobln@192.168.10.102:/home/leobln/vr.pcap .
+
+```
+
+📁 [p3_arp_mitm.pcap](./fichier_wiresshark/p3_arp_mitm.pcap)
+
+
 
 
 
