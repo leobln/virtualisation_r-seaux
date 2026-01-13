@@ -4,30 +4,7 @@ service timestamps log datetime msec
 no service password-encryption
 !
 hostname sw1
-!
-!
-!
-logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL 
-logging buffered 50000
-logging console discriminator EXCESS
-!
-no ip icmp rate-limit unreachable
-!
-ip cef
-no ip domain lookup
-!
-!
-!
-!
-!
-!
-ip tcp synwait-time 5
-! 
-!
-!
-!
-!
-!
+
 interface Ethernet0/0
  no ip address
  no shutdown
